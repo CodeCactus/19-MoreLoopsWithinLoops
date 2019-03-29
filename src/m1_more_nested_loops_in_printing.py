@@ -4,8 +4,8 @@ in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Liam Groom.
+"""  # TDO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -74,6 +74,12 @@ def triangle_right_justified(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r):
+        for j in range(r-k):
+            print(' ', end='')
+        for m in range(k+1):
+            print(str(m+1),end='')
+        print('')
 
 
 def run_test_triangle_upside_down():
@@ -118,7 +124,12 @@ def triangle_upside_down(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+        for _ in range(k):
+            print(' ', end='')
+        for j in range(r-k):
+            print(str(j+1),end='')
+        print('')
 
 def run_test_vee():
     """ Tests the    vee    function. """
@@ -169,7 +180,15 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+        for _ in range(k):
+            print(' ', end='')
+        for j in range(r-k):
+            print(str(j+1),end='')
+        print('-',end='')
+        for n in range(r-k,0,-1):
+            print(str(n),end='')
+        print('')
 
 def run_test_numbers_constant_forward():
     """ Tests the    numbers_constant_forward    function. """
@@ -227,6 +246,12 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r):
+        for j in range(maxnum):
+            boobs= int((((10**n)-1)/9)*(j+1))
+            print(str(boobs),'' ,end='')
+        print('')
+
 
 
 def run_test_numbers_constant_backwards():
@@ -269,7 +294,12 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for i in range(r):
+        for k in range(maxnum):
+            for b in range(n):
+                print(maxnum-k,end='')
+            print(' ',end='')
+        print('')
 
 def run_test_numbers_increasing_forward():
     """ Tests the    numbers_increasing_forward    function. """
@@ -321,7 +351,13 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+        num = 1
+        for j in range(maxnum):
+            boobs= int((((10**(num))-1)/9)*(j+1))
+            print(str(boobs),'' ,end='')
+            num=num+1
+        print('')
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
